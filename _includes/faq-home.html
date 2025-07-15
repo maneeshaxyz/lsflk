@@ -1,0 +1,95 @@
+<!-- faq section -->
+<section class="bg-[#e9f6fc] py-10 faq-section">
+  <div class="max-w-screen-lg mx-auto px-4">
+    <p class="uppercase text-[#0aa1dd] font-bold">FAQ</p>
+    <h2 class="font-bold text-2xl sm:text-3xl mb-6 text-gray-900 text-center sm:text-left">Have any question? Find answer here.</h2>
+
+    <!-- FAQ Items -->
+    <div class="space-y-3">
+      
+      <!-- Q1 -->
+      <div class="faq-item">
+        <button class="faq-question w-full bg-transparent border-none font-bold text-[1.05rem] text-left py-4 border-b border-gray-300 flex justify-between items-center cursor-pointer transition-colors duration-200 hover:text-[#0aa1dd]">
+          <span class="question-text">What is Lanka Software Foundation ?</span>
+          <span class="icon text-xl font-bold">+</span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 text-[0.95rem] text-gray-700">
+          <p class="pt-2">Lanka Software Foundation (LSF) is a Non-governmental non profit organization to support technical upgradation of Sri Lanka's public infrastructure and beyond to the global governments by helping digital solution designing, and open-source community's works.</p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item">
+        <button class="faq-question w-full bg-transparent border-none font-bold text-[1.05rem] text-left py-4 border-b border-gray-300 flex justify-between items-center cursor-pointer transition-colors duration-200 hover:text-[#0aa1dd]">
+          <span class="question-text">How can I get involved with LSF projects and help them?</span>
+          <span class="icon text-xl font-bold">+</span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 text-[0.95rem] text-gray-700">
+          <p class="pt-2">Starting from our "Get Involved" page would be ideal. Here you can choose the current project you are most interested in and can handle from a list. We welcome hobbyists as well as developers, scholars, legislators, and more.</p>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item">
+        <button class="faq-question w-full bg-transparent border-none font-bold text-[1.05rem] text-left py-4 border-b border-gray-300 flex justify-between items-center cursor-pointer transition-colors duration-200 hover:text-[#0aa1dd]">
+          <span class="question-text">What kinds of projects do LSF funds?</span>
+          <span class="icon text-xl font-bold">+</span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 text-[0.95rem] text-gray-700">
+          <p class="pt-2">LSF encourages the incubation of open-source projects which are innovative in nature and predominantly serve digital governance, public infrastructure, e-government, digital identity, finance, etc.</p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="faq-item">
+        <button class="faq-question w-full bg-transparent border-none font-bold text-[1.05rem] text-left py-4 border-b border-gray-300 flex justify-between items-center cursor-pointer transition-colors duration-200 hover:text-[#0aa1dd]">
+          <span class="question-text">Are there mentorship or internship opportunities available at LSF?</span>
+          <span class="icon text-xl font-bold">+</span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 text-[0.95rem] text-gray-700">
+          <p class="pt-2">LSF offers mentorship and internship programs that provide professional guidance and hands-on exposure along with certain other advantages such as networking and career development in technology and open-source domains.</p>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="faq-item">
+        <button class="faq-question w-full bg-transparent border-none font-bold text-[1.05rem] text-left py-4 border-b border-gray-300 flex justify-between items-center cursor-pointer transition-colors duration-200 hover:text-[#0aa1dd]">
+          <span class="question-text">Who are LSF’s main partners and collaborators?</span>
+          <span class="icon text-xl font-bold">+</span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 text-[0.95rem] text-gray-700">
+          <p class="pt-2">LSF has a worldwide view of the collaborations like governments, international institutions, universities, private-sector technology entrepreneurs, and open-source communities working together on cutting-edge digital transformation projects.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+    //faq
+const faqButtons = document.querySelectorAll('.faq-question');
+
+faqButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.contains('active');
+
+    // Close all others
+    faqButtons.forEach((q) => {
+      q.classList.remove('active');
+      q.querySelector('.icon').textContent = '+';
+      q.nextElementSibling.style.maxHeight = null;
+      q.nextElementSibling.style.opacity = 0;
+    });
+
+    // Toggle this one
+    if (!isOpen) {
+      btn.classList.add('active');
+      btn.querySelector('.icon').textContent = '−';
+      const content = btn.nextElementSibling;
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.opacity = 1;
+    }
+  });
+});
+
+</script>
