@@ -1,0 +1,57 @@
+<section class="bg-[#e6f4f9] py-16">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-xl sm:text-2xl font-bold text-[#001f3f] mb-10">Contributors & Supporters</h2>
+
+    <div class="swiper contributors-swiper pb-6">
+      <div class="swiper-wrapper">
+        <!-- Repeat Logos -->
+        <div class="swiper-slide">
+          <img src="../images/about/strtupx.webp" alt="StartupX Logo" class="max-w-[180px] mx-auto" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/about/uniof_marylnd.webp" alt="University of Maryland Logo" class="max-w-[180px] mx-auto" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/about/wso2.webp" alt="WSO2 Logo" class="max-w-[180px] mx-auto" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/about/lk_domain.webp" alt="LK Domain Logo" class="max-w-[180px] mx-auto" />
+        </div>
+
+        <!-- Duplicate for loop -->
+        <div class="swiper-slide">
+          <img src="../images/about/strtupx.webp" alt="StartupX Logo" class="max-w-[180px] mx-auto" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/about/uniof_marylnd.webp" alt="University of Maryland Logo" class="max-w-[180px] mx-auto" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/about/wso2.webp" alt="WSO2 Logo" class="max-w-[180px] mx-auto" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/about/lk_domain.webp" alt="LK Domain Logo" class="max-w-[180px] mx-auto" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.contributors-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+      slidesPerView: 2,
+      spaceBetween: 30,
+      breakpoints: {
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 }
+      }
+    });
+  });
+</script>
