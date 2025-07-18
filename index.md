@@ -8,7 +8,7 @@ description: "lordfsfsfhgdhg"
 {% include strategic-section-home.html %}
 {% include Become-LSF-home.html %}
 {% include bluebanner-home.html %}
-{% include faq-home.html %}
+{% include faq-home-fellows.html %}
 {% include movingBoxes-home.html %}
 
 
