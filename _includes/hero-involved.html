@@ -1,12 +1,10 @@
 
-
-<!-- Include your local Swiper CSS file in the <head> of your layout -->
 <link rel="stylesheet" href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}">
 
   <!-- HERO BANNER -->
   <div class="relative w-full h-[320px] overflow-hidden">
     <img src="../images/about/blue_bg.webp" alt="Empowering Sri Lanka" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-blue-900/30"></div> <!-- Added a subtle overlay for better text readability -->
+    <div class="absolute inset-0 bg-blue-900/30"></div> 
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
       <h1 class="text-2xl md:text-3xl font-bold text-white font-[Poppins] drop-shadow-lg">
         GET INVOLVED
@@ -14,98 +12,87 @@
     </div>
   </div>
 
-  <!-- TESTIMONIAL SLIDER SECTION -->
-  <div class="bg-gray-50 py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
+  <section class="py-8 px-5 md:px-8 max-w-screen-xl mx-auto text-center">
+
       <div class="text-center mb-12">
         <p class="text-base font-semibold text-blue-600 uppercase tracking-wider">Our Impact</p>
         <h2 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">What Our Volunteers Say</h2>
       </div>
-
-      <!-- Swiper Slider Container -->
-      <div class="relative">
-        <!-- Add padding on the sides for the arrows -->
-        <div class="swiper testimonial-swiper mx-auto" style="max-width: calc(100% - 80px);">
-          <div class="swiper-wrapper">
-            
-            <!-- Slide 1 -->
-            <div class="swiper-slide h-auto">
-              <div class="testimonial-card">
-                <div class="quote-icon"><svg width="40" height="28" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 28V14L8 0H16L8 14V28H0ZM24 28V14L32 0H40L32 14V28H24Z" fill="#E5E7EB"/></svg></div>
-                <p class="testimonial-text">"It's a privilege to have had the chance to contribute to a project of national importance. The team (both technical and non-technical) - although lean - comes with huge diversity, is super-charged and positive which I think is a major driving factor in successfully implementing the project on the ground."</p>
-                <p class="testimonial-author">Kalpa Welivitigoda</p>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide h-auto">
-              <div class="testimonial-card">
-                <div class="quote-icon"><svg width="40" height="28" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 28V14L8 0H16L8 14V28H0ZM24 28V14L32 0H40L32 14V28H24Z" fill="#E5E7EB"/></svg></div>
-                <p class="testimonial-text">"I found volunteering with the Lanka Software Foundation to be an extremely rewarding experience. Working on the Codelk-Sri Lanka Election project, I had the opportunity to directly apply my knowledge and experience to a project that is of importance to the country, while also expanding my knowledge."</p>
-                <p class="testimonial-author">Maryam Ziyad</p>
-              </div>
-            </div>
-
-            <!-- Slide 3 - ADDED -->
-            <div class="swiper-slide h-auto">
-              <div class="testimonial-card">
-                 <div class="quote-icon"><svg width="40" height="28" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 28V14L8 0H16L8 14V28H0ZM24 28V14L32 0H40L32 14V28H24Z" fill="#E5E7EB"/></svg></div>
-                <p class="testimonial-text">"Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare."</p>
-                <p class="testimonial-author">Kevin Zhang</p>
-              </div>
-            </div>
-
-            <!-- Slide 4 - ADDED -->
-            <div class="swiper-slide h-auto">
-              <div class="testimonial-card">
-                 <div class="quote-icon"><svg width="40" height="28" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 28V14L8 0H16L8 14V28H0ZM24 28V14L32 0H40L32 14V28H24Z" fill="#E5E7EB"/></svg></div>
-                <p class="testimonial-text">"Faucibus turpis in eu mi bibendum neque egestas congue quisque egestas diam in arcu cursus euismod quis."</p>
-                <p class="testimonial-author">Amara Jayasuriya</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Navigation Arrows (Positioned absolutely relative to the main container) -->
-        <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 left-0 text-gray-400 hover:text-blue-600 transition-colors cursor-pointer"></div>
-        <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 right-0 text-gray-400 hover:text-blue-600 transition-colors cursor-pointer"></div>
-
-      </div>
+<div class="overflow-hidden mt-14 relative">
+  <div id="testimonialTrack" class="flex gap-10 transition-transform duration-500 ease-in-out">
+    
+    <!-- Card 1 -->
+    <div class="flex-none w-1/2 max-w-1/2 bg-white p-10 pt-16 rounded-2xl text-left shadow-xl relative">
+      <span class="text-6xl text-gray-300 absolute top-2 left-6 leading-none">“</span>
+      <p class="text-lg text-gray-700 leading-relaxed pt-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna.
+      </p>
+      <p class="mt-7 text-xl font-bold">Jason Brody</p>
+      <p class="text-blue-600 text-lg font-medium">CEO, ABC Company</p>
     </div>
+
+    <!-- Card 2 -->
+    <div class="flex-none w-1/2 max-w-1/2 bg-white p-10 pt-16 rounded-2xl text-left shadow-xl relative">
+      <span class="text-6xl text-gray-300 absolute top-2 left-6 leading-none">“</span>
+      <p class="text-lg text-gray-700 leading-relaxed pt-8">
+        Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales ut eu sem.
+      </p>
+      <p class="mt-7 text-xl font-bold">Maria Silva</p>
+      <p class="text-blue-600 text-lg font-medium">Volunteer, GovOrg</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex-none w-1/2 max-w-1/2 bg-white p-10 pt-16 rounded-2xl text-left shadow-xl relative">
+      <span class="text-6xl text-gray-300 absolute top-2 left-6 leading-none">“</span>
+      <p class="text-lg text-gray-700 leading-relaxed pt-8">
+        Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare.
+      </p>
+      <p class="mt-7 text-xl font-bold">Kevin Zhang</p>
+      <p class="text-blue-600 text-lg font-medium">Engineer, OpenInfra</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="flex-none w-1/2 max-w-1/2 bg-white p-10 pt-16 rounded-2xl text-left shadow-xl relative">
+      <span class="text-6xl text-gray-300 absolute top-2 left-6 leading-none">“</span>
+      <p class="text-lg text-gray-700 leading-relaxed pt-8">
+        Faucibus turpis in eu mi bibendum neque egestas congue quisque egestas diam in arcu cursus euismod quis.
+      </p>
+      <p class="mt-7 text-xl font-bold">Amara Jayasuriya</p>
+      <p class="text-blue-600 text-lg font-medium">Coordinator, Digital Ministry</p>
+    </div>
+
   </div>
+</div>
+</section>
 
-<!-- Embedded styles for the testimonial card -->
-<style>
-  .testimonial-card { @apply bg-white rounded-lg shadow-lg p-8 h-full flex flex-col; }
-  .quote-icon { @apply absolute top-5 right-5 z-0; }
-  .testimonial-text { @apply text-gray-600 italic leading-relaxed flex-grow relative z-10; }
-  .testimonial-author { @apply font-bold text-gray-800 mt-4 pt-4 border-t border-gray-100 relative z-10; }
-</style>
-
-<!-- Include your local Swiper JS file and initialize it -->
-<script src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
+<!-- ✅ JavaScript for sliding -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.testimonial-swiper', {
-      loop: true,
-      // ADDED: Autoplay configuration to make it move
-      autoplay: {
-        delay: 3000, // Time in ms between slides
-        disableOnInteraction: false, // Autoplay will not be disabled after user interactions
-      },
-      slidesPerView: 1,
-      spaceBetween: 30,
-      breakpoints: {
-        768: { slidesPerView: 2, spaceBetween: 30 },
-        1024: { slidesPerView: 2, spaceBetween: 40 }
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+  const track = document.getElementById('testimonialTrack');
+  const cards = document.querySelectorAll('#testimonialTrack > div');
+
+  let index = 0;
+
+  function slideNext() {
+    const gap = 40; // gap-10 = 2.5rem = 40px
+    const visibleCards = 2;
+    const cardWidth = cards[0].offsetWidth + gap;
+
+    index++;
+    if (index > cards.length - visibleCards) {
+      index = 0;
+    }
+
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  setInterval(slideNext, 3000);
+
+  window.addEventListener('resize', () => {
+    index = 0;
+    track.style.transform = `translateX(0px)`;
   });
 </script>
+
+
+
+
