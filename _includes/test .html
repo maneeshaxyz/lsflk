@@ -1,0 +1,107 @@
+<!-- Include Swiper CSS in your <head> or before this section -->
+<link rel="stylesheet" href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}">
+
+<!--
+=================================
+      STRATEGIC FOCUS SECTION
+=================================
+-->
+<section class="bg-[#f8fafc] py-12 lg:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-10 text-left">
+      <h5 class="text-base font-semibold text-blue-600 uppercase tracking-wider">Key Initiatives</h5>
+      <h2 class="mt-2 text-4xl lg:text-5xl font-bold text-gray-900">Our Strategic Focus</h2>
+      <p class="mt-4 text-lg text-gray-600">
+        One of the top priorities of the Lanka Software Foundation (LSF) is to improve public services and governance in Sri Lanka. LSF has committed to delivering the project of Digital Public Infrastructure (DPI) by 2025.
+      </p>
+    </div>
+
+    <!-- Swiper Container for the 4 Cards -->
+    <div class="swiper-container-focus overflow-hidden">
+      <div class="swiper-wrapper pb-4"> <!-- Added padding-bottom for shadow visibility -->
+
+        <!-- Card 1: Open Source Projects -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/o.s.proj.webp" alt="Open Source Projects" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Open Source Projects</h5>
+            <p class="text-sm text-gray-600 mt-2">Advanced open source software solutions for government institutions.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Super App -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/s.app.webp" alt="Super App" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Super App</h5>
+            <p class="text-sm text-gray-600 mt-2">Integrated microapps enhancing government employee digital experience.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Email Platform -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/em.webp" alt="Email Platform" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Email Platform</h5>
+            <p class="text-sm text-gray-600 mt-2">Secure, government-grade open-source email solutions for communication.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Data Exchange -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/d.exc.webp" alt="Data Exchange" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Data Exchange</h5>
+            <p class="text-sm text-gray-600 mt-2">Secure, consent-driven data integration solutions tailored for governments.</p>
+          </div>
+        </div>
+        
+        <!-- NO DUPLICATED SLIDES. Swiper's loop handles this. -->
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 1. Make sure you include the Swiper library JS file -->
+<script src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
+
+<!-- 2. Add this initialization script immediately after it -->
+<script>
+  // Initialize the Swiper instance for the "Strategic Focus" section
+  var focusSwiper = new Swiper('.swiper-container-focus', {
+    // LOOP is the key to continuous animation.
+    loop: true,
+
+    // AUTOPLAY configuration for automatic sliding.
+    autoplay: {
+      delay: 2500, // Time in milliseconds between slides.
+      disableOnInteraction: false, // Autoplay will not be disabled after user interactions (swipes).
+      pauseOnMouseEnter: true,     // Pauses autoplay when mouse enters the swiper container.
+    },
+
+    // How many slides to show at once.
+    slidesPerView: 4,
+    spaceBetween: 24,
+
+    // Responsive settings for different screen sizes.
+    breakpoints: {
+      // For mobile screens
+      320: {
+        slidesPerView: 1.2, // Shows a little bit of the next slide
+        spaceBetween: 16
+      },
+      // For tablet screens
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // For desktop screens
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 24
+      }
+    },
+  });
+</script>

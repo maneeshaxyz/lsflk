@@ -1,11 +1,11 @@
-<!-- Include Swiper CSS if needed -->
+<!-- Include Swiper CSS in your <head> or before this section -->
 <link rel="stylesheet" href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}">
 
-<section class="bg-white py-16 lg:py-24">
+<section class="bg-[#f8fafc] py-12 lg:py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Section Header -->
-    <div class="max-w-3xl mb-12">
+    <div class="max-w-3xl mb-10 text-left">
       <h5 class="text-base font-semibold text-blue-600 uppercase tracking-wider">Key Initiatives</h5>
       <h2 class="mt-2 text-4xl lg:text-5xl font-bold text-gray-900">Our Strategic Focus</h2>
       <p class="mt-4 text-lg text-gray-600">
@@ -13,72 +13,108 @@
       </p>
     </div>
 
-<section class="overflow-hidden py-10">
-  <div class="relative w-full">
-    <div class="scroll-wrapper flex w-max animate-scroll-horizontal gap-6">
-      <!-- Repeat this block for each card -->
-      <div class="w-[300px] flex-shrink-0 text-center px-6 py-8 bg-white rounded-2xl shadow">
-       <img src="../images/home/box_icon.webp" class="w-24 h-24 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Super App</h3>
-        <p class="text-gray-600 text-sm">Integrated microapps enhancing government employee digital experience.</p>
-      </div>
-      <img src="../images/home/box_icon.webp" class="w-24 h-24 mx-auto mb-4" />
-        <img src="../images/home/triangle_icon.webp" class="w-16 h-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Email Platform</h3>
-        <p class="text-gray-600 text-sm">Secure, government-grade open-source email solutions for communication.</p>
-      </div>
-      <div class="w-[300px] flex-shrink-0 text-center px-6 py-8 bg-white rounded-2xl shadow">
-        <img src="../images/home/plus_icon.webp" class="w-16 h-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Data Exchange</h3>
-        <p class="text-gray-600 text-sm">Secure, consent-driven data integration solutions tailored for governments.</p>
-      </div>
-      <div class="w-[300px] flex-shrink-0 text-center px-6 py-8 bg-white rounded-2xl shadow">
-        <img src="../images/home/circles_icon.webp" class="w-16 h-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Open Source Project</h3>
-        <p class="text-gray-600 text-sm">Advanced open source software solutions for government institutions.</p>
-      </div>
+    <!-- Swiper Container for the 4 Cards -->
+    <div class="swiper-container-focus overflow-hidden">
+      <div class="swiper-wrapper pb-4">
 
-      <!-- Duplicate the items again to allow seamless loop -->
-      <!-- 👇 copy the same 4 again for infinite effect -->
-      <div class="w-[300px] flex-shrink-0 text-center px-6 py-8 bg-white rounded-2xl shadow">
-        <img src="../images/home/box_icon.webp" class="w-16 h-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Super App</h3>
-        <p class="text-gray-600 text-sm">Integrated microapps enhancing government employee digital experience.</p>
-      </div>
-      <div class="w-[300px] flex-shrink-0 text-center px-6 py-8 bg-white rounded-2xl shadow">
-        <img src="../images/home/triangle_icon.webp" class="w-16 h-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Email Platform</h3>
-        <p class="text-gray-600 text-sm">Secure, government-grade open-source email solutions for communication.</p>
-      </div>
-      <div class="w-[300px] flex-shrink-0 text-center px-6 py-8 bg-white rounded-2xl shadow">
-        <img src="../images/home/plus_icon.webp" class="w-16 h-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Data Exchange</h3>
-        <p class="text-gray-600 text-sm">Secure, consent-driven data integration solutions tailored for governments.</p>
-      </div>
-      <div class="w-[300px] flex-shrink-0 text-center px-6 py-8 bg-white rounded-2xl shadow">
-        <img src="../images/home/circles_icon.webp" class="w-16 h-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Open Source Project</h3>
-        <p class="text-gray-600 text-sm">Advanced open source software solutions for government institutions.</p>
+        <!-- Card 1: Open Source Projects -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/circles_icon.webp" alt="Open Source Projects" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Open Source Projects</h5>
+            <p class="text-sm text-gray-600 mt-2">Advanced open source software solutions for government institutions.                                 .</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Super App -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/box_icon.webp" alt="Super App" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Super App</h5>
+            <p class="text-sm text-gray-600 mt-2">Integrated microapps enhancing government employee digital experience.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Email Platform -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/triangle_icon.webp" alt="Email Platform" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Email Platform</h5>
+            <p class="text-sm text-gray-600 mt-2">Secure, government-grade open-source email solutions for communication.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Data Exchange -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/plus_icon.webp" alt="Data Exchange" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Data Exchange</h5>
+            <p class="text-sm text-gray-600 mt-2">Secure, consent-driven data integration solutions tailored for governments.</p>
+          </div>
+        </div>
+
+        <!-- Card 1: Open Source Projects (Duplicate) -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/circles_icon.webp" alt="Open Source Projects" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Open Source Projects</h5>
+            <p class="text-sm text-gray-600 mt-2">Advanced open source software solutions for government institutions.                                 .</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Super App (Duplicate) -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/box_icon.webp" alt="Super App" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Super App</h5>
+            <p class="text-sm text-gray-600 mt-2">Integrated microapps enhancing government employee digital experience.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Email Platform (Duplicate) -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/triangle_icon.webp" alt="Email Platform" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Email Platform</h5>
+            <p class="text-sm text-gray-600 mt-2">Secure, government-grade open-source email solutions for communication.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Data Exchange (Duplicate) -->
+        <div class="swiper-slide h-auto">
+          <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center h-full">
+            <img src="../images/home/plus_icon.webp" alt="Data Exchange" class="w-20 h-20 object-contain mb-4">
+            <h5 class="text-xl font-semibold text-gray-800">Data Exchange</h5>
+            <p class="text-sm text-gray-600 mt-2">Secure, consent-driven data integration solutions tailored for governments.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<style>
-  @keyframes scroll-horizontal {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+<!-- Include Swiper JS -->
+<script src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
+<script>
+  // Initialize the Swiper
+  var focusSwiper = new Swiper('.swiper-container-focus', {
+    // IMPORTANT: loop is set to false because we duplicated slides manually.
+    loop: false, 
+    
+    // Autoplay will still work, but will stop at the end of the duplicated slides.
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
 
-  .animate-scroll-horizontal {
-    animation: scroll-horizontal 30s linear infinite;
-  }
+    slidesPerView: 4,
+    spaceBetween: 24,
 
-  .scroll-wrapper {
-    min-width: 200%;
-  }
-</style>
+    breakpoints: {
+      320: { slidesPerView: 1.2, spaceBetween: 16 },
+      768: { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 4, spaceBetween: 24 }
+    },
+  });
+</script>
