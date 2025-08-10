@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "About Us"
-description: "lordfsfsfhgdhg"
+description: "Webpage about Lanka Software Foundation"
 ---
 
 {% include hero-1st-section-about.html %}
