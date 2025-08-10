@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Prvicy policy"
+title: "Prvicy and policy"
 description: "lordfsfsfhgdhg"
 ---
 
