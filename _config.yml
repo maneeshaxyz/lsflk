@@ -1,19 +1,18 @@
 # Site settings
-title: "lsf"
-description: "gg"
+title: "LSF"
+description: "Website for Lanka software foundation"
 url: ""
 version: v0.1.0
 
 # Contact information
-email: ""
-phone: ""
+email: "contact@opensource.lk"
+phone: "0703729895"
 address: ""
 
 # Social media
 social:
-  linkedin: ""
-  github: ""
-  discord: ""
+  linkedin: "https://www.linkedin.com/company/lsflk/"
+  github: "https://github.com/LSFLKß"
 
 
 # Build settings
