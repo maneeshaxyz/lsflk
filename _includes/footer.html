@@ -1,7 +1,5 @@
-  <!-- Footer -->
-
-
-<footer class="bg-[#01579b] text-white py-5 font-['Segoe_UI',sans-serif]">
+<!-- Footer -->
+<footer class="bg-[#01579b] text-white py-5 font-['Segoe_UI',sans-serif]"><center>
   <div class="container mx-auto px-4">
     <div class="flex flex-wrap gap-y-6">
       
@@ -9,10 +7,10 @@
       <div class="w-1/2 md:w-1/4">
         <h6 class="text-base font-bold mb-2">Menu</h6>
         <ul class="space-y-[6px] text-sm">
-          <li><a href="index.html" class="text-white hover:text-[#cce8ff] hover:underline">Home</a></li>
-          <li><a href="about.html" class="text-white hover:text-[#cce8ff] hover:underline">About</a></li>
-          <li><a href="directors.html" class="text-white hover:text-[#cce8ff] hover:underline">Board Of Directors</a></li>
-          <li><a href="fellows.html" class="text-white hover:text-[#cce8ff] hover:underline">LSF Fellows</a></li>
+          <li><a href="{{ '/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">About</a></li>
+          <li><a href="{{ '/directors/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">Board Of Directors</a></li>
+          <li><a href="{{ '/fellows/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">LSF Fellows</a></li>
         </ul>
       </div>
 
@@ -20,10 +18,10 @@
       <div class="w-1/2 md:w-1/4">
         <h6 class="text-base font-bold mb-2">Information</h6>
         <ul class="space-y-[6px] text-sm">
-          <li><a href="#" class="text-white hover:text-[#cce8ff] hover:underline">What We Do</a></li>
-          <li><a href="news.html" class="text-white hover:text-[#cce8ff] hover:underline">News & Insights</a></li>
-          <li><a href="involved.html" class="text-white hover:text-[#cce8ff] hover:underline">Get Involved</a></li>
-          <li><a href="contact.html" class="text-white hover:text-[#cce8ff] hover:underline">Contact Us</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">What We Do</a></li>
+          <li><a href="{{ '/news/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">News & Insights</a></li>
+          <li><a href="{{ '/involved/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">Get Involved</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">Contact Us</a></li>
         </ul>
       </div>
 
@@ -31,8 +29,8 @@
       <div class="w-1/2 md:w-1/4">
         <h6 class="text-base font-bold mb-2">Information</h6>
         <ul class="space-y-[6px] text-sm">
-          <li><a href="privacy.html" class="text-white hover:text-[#cce8ff] hover:underline">Privacy Policy</a></li>
-          <li><a href="about.html" class="text-white hover:text-[#cce8ff] hover:underline">Terms & Conditions</a></li>
+          <li><a href="{{ '/privacy/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">Privacy Policy</a></li>
+          <li><a href="{{ '/about/' | relative_url }}" class="text-white hover:text-[#cce8ff] hover:underline">Terms & Conditions</a></li>
         </ul>
       </div>
 
@@ -63,4 +61,4 @@
       <p class="mb-0 font-bold">LSF Team</p>
     </div>
   </div>
-</footer>
+</center></footer>
