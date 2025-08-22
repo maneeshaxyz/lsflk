@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "wenux proooooooo"
-author: "wenura dsg"
-date: 2025-03-24
+title: "dfdsf dfdsf"
+author: "dsfsfds dsg"
+date: 2025-03-23
 category: "News"
 image: /images/blog/blog 1.png
 ---
 
-## wenuxx
+## dsfsfddd
 
 Lorem Ipsum Dolor ewrhg erewr e r ewr ew r we rew...
 

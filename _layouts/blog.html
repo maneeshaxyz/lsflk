@@ -1,34 +1,31 @@
 ---
 layout: default
 ---
-<div class="relative w-full h-[320px] overflow-hidden">
-    <img src="../images/about/blue_bg.webp" alt="Empowering Sri Lanka" class="w-full h-full object-cover">
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 class="text-3xl md:text-3xl font-bold text-white drop-shadow-lg">
-            News & Insights
-        </h1>
-    </div>
+<div class="relative w-full h-[280px] overflow-hidden">
+  <img src="../images/about/blue_bg.webp" alt="Empowering Sri Lanka" class="w-full h-full object-cover">
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+      News & Insights
+    </h1>
+  </div>
 </div>
-
-
 
 <section class="blog-section" style="padding: 40px 20px; background: #f8fbff;">
   <div style="max-width: 1200px; margin: 0 auto; text-align: center; margin-bottom: 20px;">
     <h5 style="color:#0050c8; text-transform: uppercase; font-weight:700; font-size: 20px; margin:0;">
       Insights & Updates
     </h5>
-    <h2 style="font-size: 34px; font-weight:800; margin: 10px 0 20px; 
-           line-height: 1.3; white-space: nowrap;">
-  Latest Stories And Research Driving Open-Source Innovation.
-</h2>
+    <h2 style="font-size: 34px; font-weight:800; margin: 10px 0 20px; line-height: 1.3;">
+      Latest Stories And Research Driving Open-Source Innovation.
+    </h2>
 
-    
     <!-- Category Filter -->
     <div style="text-align: right; margin-top: 10px;">
       <select id="categoryFilter" style="padding: 10px; border-radius: 6px; border:1px solid #ccc;">
         <option value="all">All</option>
         <option value="technology">Technology</option>
         <option value="news">News</option>
+        <option value="article">Article</option> <!-- fixed -->
       </select>
     </div>
   </div>
@@ -37,54 +34,98 @@ layout: default
   <div id="blogGrid" 
        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto;">
     {% for post in site.posts %}
-  <div class="blog-card" data-category="{{ post.category | downcase }}" 
-       style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-    {% if post.image %}
-      <div style="position: relative; aspect-ratio: 1/1; overflow: hidden;">
-        <img src="{{ post.image }}" alt="{{ post.title }}" style="width:100%; height:100%; object-fit:cover;">
-        <div style="position: absolute; top:10px; right:10px; background:#0050c8; color:#fff; padding:6px 10px; font-size:12px; border-radius:6px;">
-          {{ post.date | date: "%d %b" }}
+      <div class="blog-card" data-category="{{ post.category | downcase }}" 
+           style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1); display: none;">
+        {% if post.image %}
+          <div style="position: relative; aspect-ratio: 1/1; overflow: hidden;">
+            <img src="{{ post.image }}" alt="{{ post.title }}" style="width:100%; height:100%; object-fit:cover;">
+            <div style="position: absolute; top:10px; right:10px; background:#0050c8; color:#fff; padding:6px 10px; font-size:12px; border-radius:6px;">
+              {{ post.date | date: "%d %b" }}
+            </div>
+          </div>
+        {% endif %}
+        <div style="padding: 15px;">
+          <!-- Category -->
+          <p style="margin: 5px 0 2px; font-size:16px; font-weight:600; color:#333;">
+            {{ post.category }}
+          </p>
+          <!-- Title -->
+          <h3 style="margin: 2px 0; font-size:18px; font-weight:600;">
+            <a href="{{ post.url }}" style="color:#000; text-decoration:none;">
+              {{ post.title }}
+            </a>
+          </h3>
         </div>
       </div>
-    {% endif %}
-    <div style="padding: 15px;">
-      <!-- Category below image -->
-      <p style="margin: 5px 0 2px; font-size:16px; font-weight:600; color:#333;">
-        {{ post.category }}
-      </p>
-      <!-- Title -->
-      <h3 style="margin: 2px 0; font-size:18px; font-weight:600;">
-        <a href="{{ post.url }}" style="color:#000; text-decoration:none;">
-          {{ post.title }}
-        </a>
-      </h3>
-    </div>
-  </div>
-{% endfor %}
-
+    {% endfor %}
   </div>
 </section>
 
 <!-- Pagination -->
-<div style="text-align:center; margin:30px 0;">
-  <span style="padding:8px 12px; border:1px solid #ccc; border-radius:5px; margin:0 3px; cursor:pointer;">1</span>
-  <span style="padding:8px 12px; border:1px solid #ccc; border-radius:5px; margin:0 3px; cursor:pointer;">2</span>
-  <span style="padding:8px 12px; border:1px solid #ccc; border-radius:5px; margin:0 3px; cursor:pointer;">3</span>
-</div>
+<div id="pagination" style="text-align:center; margin:30px 0;"></div>
 
 <script>
-  // JS Filtering
   const filter = document.getElementById("categoryFilter");
-  const cards = document.querySelectorAll(".blog-card");
+  const cards = Array.from(document.querySelectorAll(".blog-card"));
+  const pagination = document.getElementById("pagination");
 
+  let currentPage = 1;
+  const postsPerPage = 9;
+  let filteredCards = [...cards];
+
+  function renderCards() {
+    cards.forEach(card => card.style.display = "none");
+
+    const start = (currentPage - 1) * postsPerPage;
+    const end = start + postsPerPage;
+    const visibleCards = filteredCards.slice(start, end);
+
+    visibleCards.forEach(card => card.style.display = "block");
+
+    renderPagination();
+  }
+
+  function renderPagination() {
+    pagination.innerHTML = "";
+    const totalPages = Math.ceil(filteredCards.length / postsPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("span");
+      btn.textContent = i;
+      btn.style.padding = "8px 12px";
+      btn.style.border = "1px solid #ccc";
+      btn.style.borderRadius = "5px";
+      btn.style.margin = "0 3px";
+      btn.style.cursor = "pointer";
+      btn.style.background = (i === currentPage) ? "#0050c8" : "#fff";
+      btn.style.color = (i === currentPage) ? "#fff" : "#000";
+
+      btn.addEventListener("click", () => {
+        currentPage = i;
+        renderCards();
+      });
+
+      pagination.appendChild(btn);
+    }
+  }
+
+  // Filter logic
   filter.addEventListener("change", function() {
     const val = this.value;
-    cards.forEach(card => {
-      if (val === "all" || card.dataset.category === val) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
+    if (val === "all") {
+      filteredCards = [...cards];
+    } else {
+      filteredCards = cards.filter(card => card.dataset.category === val);
+    }
+    currentPage = 1;
+    renderCards();
   });
+
+  // Init
+  renderCards();
 </script>
+
+
+<!-- Add related articles here again -->
+{% include related-articles-news.html %}
+

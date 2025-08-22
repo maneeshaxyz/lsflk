@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "wenux proooooooo"
-author: "wenura kavinda"
-date: 2025-03-24
+title: "dsfs dsfdsf"
+author: "dsfds dsfds"
+date: 2025-03-25
 category: "Article"
 image: /images/blog/blog 3.webp
 ---

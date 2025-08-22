@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lorem Ipsum Dolor Sit Amet"
-date: 2025-03-12
+date: 2025-03-30
 author: "Sanjiva Weerawarana"
 category: "Technology"
 image: /images/blog/blog 2.png

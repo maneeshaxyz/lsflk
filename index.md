@@ -9,7 +9,7 @@ description: "lordfsfsfhgdhg"
 {% include Become-LSF-home.html %}
 {% include bluebanner-home.html %}
 {% include faq-home-fellows.html %}
-{% include movingBoxes-home.html %}
+{% include resources-and-articles-home.html %}
 
 
 
