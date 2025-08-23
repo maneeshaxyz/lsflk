@@ -1,7 +1,14 @@
 # Site settings
 title: "LSF"
 description: "Website for Lanka software foundation"
-url: ""
+
+# --- Important for GitHub Pages ---
+# Sets the main domain for your site, required by plugins.
+url: "https://maneeshayjw.github.io" 
+# Sets the subdirectory of your site. Must be the name of your repository.
+baseurl: "/lsf-web"
+# ------------------------------------
+
 version: v0.1.0
 
 # Contact information
@@ -12,7 +19,7 @@ address: ""
 # Social media
 social:
   linkedin: "https://www.linkedin.com/company/lsflk/"
-  github: "https://github.com/LSFLKß"
+  github: "https://github.com/LSFLK" # Typo was fixed here
 
 
 # Build settings
@@ -42,4 +49,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-
+# Tells Jekyll to publish posts with dates set in the future.
+# This is important because GitHub's servers are in a different timezone.
+future: true

@@ -11,6 +11,6 @@ image: /images/blog/blog 3.webp
 
 Lorem Ipsum Dolor ewrhg erewr e r ewr ew r we rew...
 
-![Earth from space](/images/blog/blog 3.webp)
+![image descripton]({{ page.image | relative_url }})
 
 test content 1...

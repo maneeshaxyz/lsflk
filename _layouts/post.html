@@ -2,22 +2,30 @@
 layout: default
 ---
 
-<header class="relative h-[325px] flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('/images/about/blue_bg.webp');">
-  <div class="text-white">
-    <h1 class="text-[3.5rem] font-bold leading-[1.2]">{{ page.title }}</h1>
-    
-    <p class="opacity-90">{{ page.date | date: "%d.%m.%Y" }}</p>
-    {% if page.author %}
-      <p class="mt-2 font-semibold uppercase tracking-wider opacity-95">{{ page.author }}</p>
-    {% endif %}
+<div class="relative h-[325px] w-full overflow-hidden">
+  
+  <img src="{{ '/images/about/blue_bg.webp' | relative_url }}" alt="Header Background" class="absolute top-0 left-0 w-full h-full object-cover z-0">
+  
+  <div class="relative h-full flex items-center justify-center text-center z-10">
+    <div class="hero-content text-white">
+  <h1 class="text-[3.5rem] font-bold leading-[1.2]">{{ page.title }}</h1>
+  
+  <p class="meta-date opacity-90 mt-4">{{ page.date | date: "%d.%m.%Y" }}</p>
+
+  {% if page.author %}
+    <p class="meta-author mt-3 font-semibold uppercase tracking-wider opacity-95">{{ page.author }}</p>
+  {% endif %}
+</div>
   </div>
-</header>
+
+</div>
 
 <style>
   /* --- Main container for the article content --- */
   .post-content-container {
     max-width: 900px;
     margin: 30px auto;
+    padding: 0 20px; 
   }
 
   /* --- General styling for the article text itself --- */
@@ -83,5 +91,4 @@ layout: default
   </article>
 </section>
 
-<!-- Add related articles here again -->
 {% include related-articles-news.html %}

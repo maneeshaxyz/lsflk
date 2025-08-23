@@ -1,29 +1,14 @@
-  <div class="bg-[#00529B] py-16 lg:py-20 relative">
-    
-    <!-- Left Lion (Now positioned absolutely to the far left) -->
-    <div class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 hidden md:block">
-      <img src="../images/involved/lion_logo_silver.webp" alt="Lion Left" class="w-32 h-auto opacity-90">
-    </div>
+<div class="bg-[#00529B] py-16 lg:py-20">
+  
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 sm:gap-8">
 
-    <!-- Centered Text Container -->
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl lg:text-4xl font-bold text-white text-center leading-tight">
-        “If you want to see positive change in your country, be a part of it”
-      </h2>
-    </div>
+    <img src="{{ '/images/involved/lion_logo_silver.webp' | relative_url }}" alt="Lion Left" class="hidden md:block w-40 h-auto opacity-90 flex-shrink-0">
 
-    <!-- Right Lion (Now positioned absolutely to the far right) -->
-    <div class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 hidden md:block">
-      <img src="../images/involved/lion_logo_silver.webp" alt="Lion Right" class="w-32 h-auto opacity-90">
-    </div>
+    <h2 class="text-3xl lg:text-4xl font-bold text-white text-center leading-tight">
+      “If you want to see positive change in your country, be a part of it”
+    </h2>
+
+    <img src="{{ '/images/involved/lion_logo_silver.webp' | relative_url }}" alt="Lion Right" class="hidden md:block w-40 h-auto opacity-90 flex-shrink-0">
 
   </div>
-
-  <!-- Participation Section -->
-  <div class="bg-gray-50 py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-        Here’s how you can participate in the community
-      </h2>
-    </div>
-  </div>
+</div>
